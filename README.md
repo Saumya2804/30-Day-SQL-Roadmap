@@ -157,14 +157,14 @@ I am sharing **queries, practice problems, and mini-projects** here to document 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/YourUsername/30-Day-SQL-Roadmap.git
+[git clone https://github.com/YourUsername/30-Day-SQL-Roadmap.git](https://github.com/Saumya2804/30-Day-SQL-Roadmap.git)
 ```
 
 2. Open the SQL files in your preferred SQL environment (MySQL, PostgreSQL, SQL Server, etc.).
 
 3. Run queries, inspect outputs, and modify them to understand concepts better.
 
-4. Follow my **LinkedIn posts** to see daily progress and practice examples: \https://www.linkedin.com/in/saumyajain2804
+4. Follow my **LinkedIn posts** to see daily progress and practice examples:https://www.linkedin.com/in/saumyajain2804
 
 ---
 
