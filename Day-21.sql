@@ -1,3 +1,4 @@
+use school
 --Q1: Basic Transaction Structure
 --Write a block of SQL that starts a transaction, inserts a new employee (use EmpID 9), and then permanently saves the change.
 -- Start the transaction
@@ -73,3 +74,19 @@ SELECT * FROM Learners_Audit WHERE columns_LID IN (104, 105, 106);
 --Q7: Atomicity Principle
 --Demonstrate the Atomicity principle by attempting to insert two new employees (EmpID 90 and EmpID 91) in one transaction, 
 --where EmpID 90 is valid, but EmpID 91 will cause an error (e.g., trying to insert a duplicate LearnerID instead).
+Begin transaction;
+begin try
+--Valid insertion
+insert into employees Values(1001,'Ankit','HR',90000)
+--Invalid insertion
+insert into employees Values(1,'Priya','IT',60000)
+commit transaction;
+END try
+
+Begin Catch 
+--Due to atomicity but insertion will undone
+IF @@TRANCOUNT > 0 Rollback transaction;
+PRINT 'Transaction failed and rolled back due to error.'; 
+END CATCH
+
+SELECT * FROM Employees WHERE EmpID = 1001;
